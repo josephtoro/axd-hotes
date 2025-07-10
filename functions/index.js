@@ -1,46 +1,48 @@
-// Este archivo contiene una función para enviar un correo al crear una nueva reserva
-// PERO está desactivado porque requiere el plan Blaze de Firebase
-
-/*
+// Importa funciones básicas de Firebase Functions
 const functions = require("firebase-functions");
-const admin = require("firebase-admin");
-const nodemailer = require("nodemailer");
 
-// Inicializa la app de Firebase Admin
+// Importa el SDK de administrador para interactuar con Firestore
+const admin = require("firebase-admin");
+
+// Inicializa Firebase Admin (necesario para acceder a Firestore desde funciones)
 admin.initializeApp();
 
-// Configura el transporte con Nodemailer (puedes usar Gmail u otro servicio SMTP)
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: "tucorreo@gmail.com", // ← Reemplaza con tu correo real
-    pass: "tu_contraseña_de_aplicación" // ← Usa una contraseña de aplicación
-  }
-});
+// ----------- 👇 COMIENZA SECCIÓN OPCIONAL (INACTIVA) ------------
+// Si quieres usar Nodemailer en el futuro, descomenta estas líneas
+// const nodemailer = require("nodemailer");
 
-// Función que se ejecuta automáticamente cuando se crea un nuevo documento en la colección "reservas"
-exports.enviarConfirmacionReserva = functions.firestore
-  .document("reservas/{reservaId}")
-  .onCreate(async (snap, context) => {
-    const data = snap.data();
+// Configuración del servicio de correo (solo si decides usarlo luego)
+// const transporter = nodemailer.createTransport({
+//   service: "gmail",
+//   auth: {
+//     user: "tucorreo@gmail.com",            // ← tu correo
+//     pass: "tu_contraseña_de_aplicación"    // ← contraseña generada desde Gmail (App Password)
+//   }
+// });
 
-    // Estructura del correo
-    const mailOptions = {
-      from: "AXD Hotel <tucorreo@gmail.com>", // ← Debe coincidir con el correo autenticado
-      to: data.email,
-      subject: "Confirmación de Reserva - AXD Hotel",
-      text: `Hola ${data.nombre},
+// Función que se activa al crear una reserva en Firestore
+// exports.enviarConfirmacionReserva = functions.firestore
+//   .document("reservas/{reservaId}")
+//   .onCreate(async (snap, context) => {
+//     const data = snap.data();
 
-Gracias por reservar con nosotros.
+//     const mailOptions = {
+//       from: "AXD Hotel <tucorreo@gmail.com>",
+//       to: data.email,
+//       subject: "Confirmación de Reserva - AXD Hotel",
+//       text: `Hola ${data.nombre},\n\nGracias por reservar con nosotros.\n\nDetalles:\n📅 Llegada: ${data.checkin}\n📅 Salida: ${data.checkout}\n🏨 Habitación: ${data.habitacion}\n\n¡Te esperamos!\nAXD Hotel`
+//     };
 
-Detalles de tu reserva:
-📅 Llegada: ${data.checkin}
-📅 Salida: ${data.checkout}
-🏨 Habitación: ${data.habitacion}
+//     try {
+//       await transporter.sendMail(mailOptions);
+//       console.log(" Correo enviado a:", data.email);
+//     } catch (error) {
+//       console.error(" Error al enviar correo:", error);
+//     }
+//   });
 
-¡Te esperamos!
-AXD Hotel`
-    };
-
-    try {
-      // En
+// Puedes agregar más funciones aquí si deseas
+// Ejemplo de función activa (comentada):
+// exports.helloWorld = functions.https.onRequest((request, response) => {
+//   response.send("Hola desde Firebase Functions!");
+// });
