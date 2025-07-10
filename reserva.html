@@ -1,226 +1,150 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AXD Hotel</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/fontawesome.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two|Noto+Serif" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    </head>
-    <body>
-        
-        <nav class="navbar navbar-expand-lg navbar-light bg-light text-capitalize main-font-family">
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="imgs/logo.png" alt="#" /></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<html lang="es">
 
-                <div class="collapse navbar-collapse" id="show-menu">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#home">Inicio <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#room">alojamiento</a>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#blog">blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">contactos</a>
-                        </li>
-                        <li class="nav-item book d-flex align-items-center">
-                            <a class="nav-link" href="#">reservar ahora</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
-        <header id="home">
-            <div class="small-container">
-                <div class="row">
-                    <div class="col-lg-4 col-12 lobster-font-family d-flex align-items-center">
-                        <h2>Hotel AXD te ofrece comodidad, buena ubicación y atención personalizada.</h2>
-                    </div>
-                </div>
-                <div class="h-slider roboto-font-family welcome d-flex align-items-center justify-content-center">
-                    <h1 class="text-capitalize">Bienvenido a <br><span>AXD hotel</span></h1>
-                    <div id="headerslider" class="carousel slide" data-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item carousel-three active"></div>
-                        <div class="carousel-item carousel-two"></div>
-                        <div class="carousel-item carousel-one"></div>
-                      </div>
-                      <a class="carousel-control-prev" href="#headerslider" role="button" data-slide="prev">
-                        <i class="fas fa-angle-double-left"></i>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#headerslider" role="button" data-slide="next">
-                        <i class="fas fa-angle-double-right"></i>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </div>
-                </div>
-            </div>
-            <div class="st-rec"></div>
-            <div class="rd-rec"></div>
-        </header>
-        
-        <div class="about lobster-font-family">
-            <div class="container">
-                <h2 class="text-center text-capitalize">Acerca de nuestro hotel</h2>
-                <img src="imgs/shape.png">
-                <div class="row">
-                    <div class="col-lg-6 col-12">
-                        <h4>El mejor lugar para disfrutar tu vida.</h4>
-                        <p>En Hotel AXD combinamos confort, buena atención y una ubicación estratégica para que disfrutes tu estadía al máximo. Ideal para viajes de trabajo o descanso.</p>
-                    </div>
-                    <div class="col-lg-6 col-12">
-                        <div class="img"></div>
-                    </div>
-                </div>
-                <h2 class="text-capitalize" id="room">habitaciones y suits</h2>
-                <div class="row">
-                    <div class="col-lg-4 col-12">
-                        <div class="img"></div>
-                    </div>
-                    <div class="col-lg-8 col-12">
-                        <div class="block">
-                            <div>
-                                <img src="imgs/shape.png">
-                                <strong>COP:1.000.000</strong>
-                                <h5>habitaciones de lujo</h5>
-                                <p>Disfruta del máximo confort en nuestras habitaciones de lujo, diseñadas con estilo moderno, acabados elegantes y todas las comodidades que mereces: cama king, baño privado, aire acondicionado, Wi-Fi y vista panorámica. Tu descanso, con un toque de distinción.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="gallery lobster-font-family" id="blog">
-            <div class="container">
-                <h2 class="text-calitalize text-center">Nuestra galería</h2>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="pic-one"><h4>Natación relajada</h4></div>
-                        <div class="pic-two"><h4>Alojamiento espacioso</h4></div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="pic-three active"><h4>Yoga</h4></div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="pic-four"><h4>Cena romantica</h4></div>
-                        <div class="pic-five"><h4>bienestar</h4></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="slider main-font-family">
-            <h2 class="text-center text-capitalize main-font-family">lo que dicen nuestros clientes</h2>
-          <div id="slideToNext" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#slideToNext" data-slide-to="0" class="active"></li>
-              <li data-target="#slideToNext" data-slide-to="1"></li>
-              <li data-target="#slideToNext" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="carousel-caption d-block">
-                    <img src="imgs/pic7.png">
-                  <h5>María G.</h5>
-                  <p>Una experiencia increíble. La habitación impecable, el personal muy amable y la ubicación perfecta. Volveré sin duda</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-caption d-block">
-                    <img src="imgs/pic7.png">
-                  <h5>Carlos R.</h5>
-                  <p>Todo fue excelente. Desde el check-in hasta el desayuno. Ideal para descansar y desconectarse.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-caption d-block">
-                    <img src="imgs/pic7.png">
-                  <h5>Laura M</h5>
-                  <p>Muy recomendable. Ambiente tranquilo, decoración moderna y atención de primera. Se nota el cuidado en cada detalle.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="contact main-font-family text-center">
-            <div class="container">
-                <h2 id="contact">Ponte en contacto</h2>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="contact-form">
-                            <form action="https://formsubmit.co/josephbenjamintoro@gmail.com" method="POST">
-                                <input type="text" placeholder="Nombre">
-                                <input type="email" placeholder="Correo electrónico">
-                                <input type="text" placeholder="Teléfono">
-                                <textarea placeholder="Mensaje"></textarea>
-                                <input type="submit" value="Enviar">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <h2 class="text-right">Reserva tus vacaciones Ideal para retiros relajados y encuentros culturales</h2>
-                        <img src="imgs/shape.png">
-                    </div>
-                </div>
-            </div>
-            <div></div>
-        </div>
-        
-        <footer class="noto-font-family">
-            <div class="overlay">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <h3>Encuéntranos</h3>
-                            <p>Cl. 79 #18-18 Oficina 404, Chapinero<br>
-                                Bogotá, Cundinamarca<br>
-                                (+57) 601 593 5500<br>
-                                comunicaciones@axd.com.co
-                            </p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-12 form">
-                            <ul>
-                                <li><a href="https://api.whatsapp.com/send?phone=573152940244" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                                <li><a href="https://www.instagram.com/axd.sas/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas - AXD Hotel</title>
 
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script>
-            $(function () {
-                
-                'use strict';
-                
-                var winH = $(window).height();
-                
-                $('header').height(winH);
-                
-                $('.navbar ul.navbar-nav li a').on('click', function (e) {
-                    
-                    var getAttr = $(this).attr('href');
-                    
-                    e.preventDefault();
-                    $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
-                });
-            });
-        </script>
-    </body>
+  <!-- Estilos desde CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two|Noto+Serif|Roboto" rel="stylesheet">
+
+  <!-- Estilo adicional para fijar footer al fondo -->
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light text-capitalize main-font-family">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="imgs/logo.png" alt="Logo AXD Hotel" /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="show-menu">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#room">Alojamiento</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contactos</a></li>
+          <li class="nav-item book d-flex align-items-center">
+            <a class="nav-link" href="reserva.html">Reservar ahora</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="py-5 text-center">
+    <div class="container">
+      <h2 class="lobster-font-family mb-4">Formulario de Reserva</h2>
+
+      <form id="form-reserva" class="text-left mx-auto" style="max-width: 500px;">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="checkin">Fecha de llegada</label>
+          <input type="date" class="form-control" id="checkin" name="checkin" required>
+        </div>
+        <div class="form-group">
+          <label for="checkout">Fecha de salida</label>
+          <input type="date" class="form-control" id="checkout" name="checkout" required>
+        </div>
+        <div class="form-group">
+          <label for="habitacion">Tipo de habitación</label>
+          <select class="form-control" id="habitacion" name="habitacion" required>
+            <option value="">Seleccione una opción</option>
+            <option value="individual">Individual</option>
+            <option value="doble">Doble</option>
+            <option value="suite">Suite</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-dark btn-block">Reservar</button>
+        <div id="mensaje-reserva" class="mt-3 roboto-font-family"></div>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 bg-light roboto-font-family">
+    <p>&copy; 2025 AXD Hotel - Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Firebase App y Firestore (compatibilidad) -->
+  <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAfXtwFvJlSo5TWUrJ3tN7lm4Rkjgif2_Q",
+      authDomain: "hotel-axd.firebaseapp.com",
+      projectId: "hotel-axd",
+      storageBucket: "hotel-axd.firebasestorage.app",
+      messagingSenderId: "500467497010",
+      appId: "1:500467497010:web:5a15a49485d1824293242b"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('form-reserva').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const checkin = document.getElementById('checkin').value;
+        const checkout = document.getElementById('checkout').value;
+        const habitacion = document.getElementById('habitacion').value;
+
+        try {
+          await db.collection("reservas").add({
+            nombre,
+            email,
+            checkin,
+            checkout,
+            habitacion,
+            fecha: new Date()
+          });
+
+          document.getElementById('mensaje-reserva').textContent = "✅ ¡Reserva enviada con éxito!";
+          document.getElementById('mensaje-reserva').style.color = "green";
+          document.getElementById('form-reserva').reset();
+        } catch (error) {
+          console.error("Error:", error);
+          document.getElementById('mensaje-reserva').textContent = "❌ Hubo un error al guardar.";
+          document.getElementById('mensaje-reserva').style.color = "red";
+        }
+      });
+    });
+  </script>
+
+</body>
 </html>
